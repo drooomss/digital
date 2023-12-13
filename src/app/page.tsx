@@ -1,5 +1,6 @@
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import Navbar from '@/components/Navbar'
+import ProductReel from '@/components/ProductReel'
 import { Button, buttonVariants } from '@/components/ui/button'
 import { ArrowDownToLine, Box, HeartHandshake } from 'lucide-react'
 import { CheckCircle } from 'lucide-react'
@@ -45,11 +46,17 @@ export default function Home() {
             <Link href="/products" className={buttonVariants()}>
               Encuentra Tendencias
             </Link>
-            <Button variant="ghost">Calidad Comprobada &rarr;</Button>
+            <Button variant="ghost">
+              Calidad Comprobada &rarr;
+            </Button>
           </div>
         </div>
         
+
+
         {/* TODO: List Products */}
+
+        <ProductReel query={{sort: "desc", limit: 4}} href='/productos' title='Marcas Nuevas' />
       </MaxWidthWrapper>
 
       <section className="border-t border-gray-200 bg-gray-50">

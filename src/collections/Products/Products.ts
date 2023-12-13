@@ -21,7 +21,7 @@ export const Products: CollectionConfig = {
         },
         {
             name: "name",
-            label: "Label",
+            label: "Name",
             type: "text",
             required: true,
         },
@@ -43,13 +43,14 @@ export const Products: CollectionConfig = {
             name: 'Categoria',
             label: "Categoria",
             type: "select",
-            options: PRODUCT_CATEGORIES.map(({label, value}) => ({label, value})
-            ),
+            options: PRODUCT_CATEGORIES.map(
+                ({label, value}) => ({label, value})
+                ),
             required: true,
         },
         {
             name: "product_files",
-            label: "product_file(s)",
+            label: "product file(s)",
             type: "relationship",
             required: true,
             relationTo: "product_files",
@@ -72,7 +73,7 @@ export const Products: CollectionConfig = {
                 },
                 {
                     label: "Aprobado",
-                    value: "approved"
+                    value: "aprobado"
                 },
                 {
                     label: "Denegado",
